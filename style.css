@@ -1,15 +1,21 @@
 img {
   border-radius: 125px 125px 125px 125px;
-  animation: bounce 2s infinite;
+  animation: bounce 3s infinite;
   margin-top: 20px;
+  box-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  text-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 20px;
+  margin: 25px;
+  text-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 body {
-  background: linear-gradient(to right,rgb(255, 75, 30), rgb(28, 20, 56));
+  background: linear-gradient(to top,rgb(28, 246, 25), rgb(0, 115, 13));
   font-family: 'Trebuchet MS';
   color: rgb(255, 255, 255);
   text-align: center;
@@ -22,17 +28,17 @@ a {
   padding: 10px;
   display: block;
   text-align: center;
-  margin: 10px;
-  color: rgb(28, 20, 56);
+  margin: 15px;
+  color: rgb(22, 56, 20);
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.5s ease;
 }
 
 a:hover {
-  color: rgb(0, 106, 255);
-  background-color: rgb(255, 75, 30);
-  transform: scale(1.05);
+  color: rgb(255, 255, 255);
+  background-color: rgb(177, 110, 33);
+  transform: scale(1.10);
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
