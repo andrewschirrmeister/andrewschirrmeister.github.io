@@ -9,16 +9,17 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 25px;
   text-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 body {
-  background: linear-gradient(to top,rgb(28, 246, 25), rgb(0, 115, 13));
-  font-family: 'Trebuchet MS';
+  background: linear-gradient(to top,rgb(68, 200, 66), rgb(0, 115, 13));
+  font-family: 'poppins';
   color: rgb(255, 255, 255);
   text-align: center;
+  margin: 10px;
 }
 
 a {
@@ -29,6 +30,8 @@ a {
   display: block;
   text-align: center;
   margin: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
   color: rgb(22, 56, 20);
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -37,7 +40,7 @@ a {
 
 a:hover {
   color: rgb(255, 255, 255);
-  background-color: rgb(177, 110, 33);
+  background-color: rgb(84, 16, 96);
   transform: scale(1.10);
 }
 @keyframes bounce {
@@ -51,5 +54,11 @@ a:hover {
   60% {
   transform: translateY(-5px);
   }
+}
+footer {
+  text-align: center;
+  padding: 10px 0;
+  color: #ffffff;
+  font-size: 12px;
 }
 
