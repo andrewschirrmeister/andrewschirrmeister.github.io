@@ -1,64 +1,78 @@
+body {
+  /* Gradiente mais suave ou cores mais modernas */
+  background: linear-gradient(135deg, #1e4d1a, #00730d);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
 img {
-  border-radius: 125px 125px 125px 125px;
+  border-radius: 50%; /* Torna a imagem perfeitamente circular */
   animation: bounce 3s infinite;
   margin-top: 20px;
-  box-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.2);
 }
+
 h1 {
-  text-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-  font-size: 18px;
-  margin: 25px;
-  text-shadow: -3px 4px 5px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-weight: 300;
+  margin: 15px auto;
+  max-width: 80%;
+  opacity: 0.9;
 }
 
-body {
-  background: linear-gradient(to top,rgb(68, 200, 66), rgb(0, 115, 13));
-  font-family: 'poppins';
-  color: rgb(255, 255, 255);
-  text-align: center;
-  margin: 10px;
+.links-container {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 a {
   background-color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  padding: 10px;
-  display: block;
-  text-align: center;
-  margin: 15px;
-  margin-left: 50px;
-  margin-right: 50px;
-  color: rgb(22, 56, 20);
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  margin: 15px 0;
+  color: #163814;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(84, 16, 96);
-  transform: scale(1.10);
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);  
-  }
-  40% {
-    transform: translateY(-10px);
-}
-
-  60% {
-  transform: translateY(-5px);
-  }
-}
-footer {
-  text-align: center;
-  padding: 10px 0;
   color: #ffffff;
-  font-size: 12px;
+  background-color: #541060;
+  transform: translateY(-3px) scale(1.05);
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+footer {
+  padding: 20px 0;
+  opacity: 0.7;
+  font-size: 11px;
+}
