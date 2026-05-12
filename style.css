@@ -1,79 +1,154 @@
+:root {
+  --primary-bg: #0d0d0d;
+  --accent-color: #00ff88; /* Verde neon moderno */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+}
+
 body {
-  /* Gradiente mais suave ou cores mais modernas */
-  background: linear-gradient(135deg, #1e4d1a, #00730d);
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
+  background-color: var(--primary-bg);
+  background-image: 
+    radial-gradient(circle at 20% 30%, #1e4d1a 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, #541060 0%, transparent 40%);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
   text-align: center;
   margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
-  padding: 20px;
+  padding: 40px 20px;
+  z-index: 1;
 }
 
-img {
-  border-radius: 50%; /* Torna a imagem perfeitamente circular */
-  animation: bounce 3s infinite;
-  margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border: 3px solid rgba(255, 255, 255, 0.2);
+/* Foto de Perfil com Animação */
+.profile-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--glass-border);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.profile-container:hover .profile-pic {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.badge {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  background: var(--accent-color);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 30px;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: var(--accent-color);
   font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: -10px;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 1.5;
-  margin: 15px auto;
-  max-width: 80%;
-  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 450px;
+  margin: 20px auto 40px;
+  opacity: 0.8;
 }
 
+/* Links */
 .links-container {
   max-width: 400px;
   margin: 0 auto;
 }
 
 a {
-  background-color: white;
-  font-size: 18px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  font-size: 16px;
   font-weight: 500;
-  border-radius: 12px;
-  padding: 12px;
+  border-radius: 16px;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Espaço entre o ícone e o texto */
-  margin: 15px 0;
-  color: #163814;
+  gap: 12px;
+  margin-bottom: 16px;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+a i {
+  font-size: 20px;
 }
 
 a:hover {
-  color: #ffffff;
-  background-color: #541060;
-  transform: translateY(-3px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-10px); }
-  60% { transform: translateY(-5px); }
+/* Link em Destaque (WhatsApp) */
+.featured-link {
+  background: var(--accent-color);
+  color: #000;
+  font-weight: 700;
+  border: none;
+}
+
+.featured-link:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
 }
 
 footer {
-  padding: 20px 0;
-  opacity: 0.7;
-  font-size: 11px;
+  padding: 30px 0;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+/* Animação de Entrada */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  animation: fadeInUp 0.8s ease-out;
 }
